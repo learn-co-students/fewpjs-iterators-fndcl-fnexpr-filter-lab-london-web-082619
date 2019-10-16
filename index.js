@@ -16,10 +16,11 @@ function findMatching(drivers, string){
     function checkName(name, string){
         if (name.toLowerCase() == string.toLowerCase()){
             matchingDrivers.push(name);
+            debugger
         }
     }
 
-    return drivers.filter(driver => checkName(driver, string));
-    debugger
+    drivers.filter(driver => checkName(driver, string));
+    return matchingDrivers;
 }
 
